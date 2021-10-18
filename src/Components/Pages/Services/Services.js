@@ -4,9 +4,9 @@ import Service from './Service';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(()=>{
-        fetch('./data.json')
+        fetch('https://raw.githubusercontent.com/tanzirrazu/fakedata/main/data.json')
         .then(res=> res.json())
-        .then(data => setServices(data.services))
+        .then(data => setServices(data))
     },[])
     return (
         <div>

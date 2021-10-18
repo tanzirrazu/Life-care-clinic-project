@@ -5,7 +5,8 @@ import Home from './Components/Pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Pages/Footer/Footer';
 import NotFound from './Components/Pages/NotFound/NotFound';
-import ServiceDetails from './Components/Pages/Services/ServiceDetails';
+import ServiceDetails from './Components/Pages/ServiceDetails/ServiceDetails';
+
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
                   <Home/>
               </Route>
               <Route path="/serviceDetails/:servicedetailsid">
-                  <ServiceDetails/>
+                <ServiceDetails/>
               </Route>
               <Route exact path="/">
                   <Home/>
