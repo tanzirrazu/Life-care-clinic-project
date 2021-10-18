@@ -9,7 +9,7 @@ const ServiceDetails = () => {
         fetch('https://raw.githubusercontent.com/tanzirrazu/fakedata/main/data.json')
         .then(res => res.json())
         .then(data =>setDetails(data))
-    },[])
+    },[details, servicedetailsid])
 
    let detailFound = details.filter(detail => detail.id == servicedetailsid)
   

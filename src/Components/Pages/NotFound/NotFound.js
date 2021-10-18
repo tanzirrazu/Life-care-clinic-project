@@ -4,7 +4,7 @@ import notfound from '../../imgaes/notfound.jpg'
 
 const NotFound = () => {
     return (
-        <div className="row container-fluid align-items-center p-5 gap-3 ">
+        <div className="row container-fluid align-items-center p-5 g-3 ">
             <div className="col-md-6 col-lg-6">
                 <div >
                     <h1 className="fw-bold display-1 text-primary text-center"> 404!</h1>

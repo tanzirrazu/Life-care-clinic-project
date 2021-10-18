@@ -6,12 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Pages/Footer/Footer';
 import NotFound from './Components/Pages/NotFound/NotFound';
 import ServiceDetails from './Components/Pages/ServiceDetails/ServiceDetails';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+import AuthProvider from './Components/Context/AuthProvider';
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+    <AuthProvider>
+    <BrowserRouter>
       <Header/>
           <Switch>
               <Route path="/home">
@@ -23,12 +27,19 @@ function App() {
               <Route exact path="/">
                   <Home/>
               </Route>
+              <Route path="/signin">
+                  <Login/>
+              </Route>
+              <Route path="/register">
+                  <Register/>
+              </Route>
               <Route  path="*">
                   <NotFound/>
               </Route>
           </Switch>
           <Footer/>
       </BrowserRouter>
+    </AuthProvider>
     </div>
   );
 }
