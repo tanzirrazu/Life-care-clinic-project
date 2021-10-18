@@ -9,6 +9,8 @@ import ServiceDetails from './Components/Pages/ServiceDetails/ServiceDetails';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import AuthProvider from './Components/Context/AuthProvider';
+import DoctorDetails from './Components/Pages/OurDoctors/DoctorDetails';
+import About from './Components/Pages/About/About';
 
 
 function App() {
@@ -21,8 +23,14 @@ function App() {
               <Route path="/home">
                   <Home/>
               </Route>
+              <Route path="/about">
+                  <About/>
+              </Route>
               <Route path="/serviceDetails/:servicedetailsid">
                 <ServiceDetails/>
+              </Route>
+              <Route path="/doctorDetails/:doctorDetailsId">
+                <DoctorDetails/>
               </Route>
               <Route exact path="/">
                   <Home/>
