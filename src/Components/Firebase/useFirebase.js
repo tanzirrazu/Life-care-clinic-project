@@ -19,13 +19,10 @@ const [password, setPassword] = useState('')
     const googleProvider = new GoogleAuthProvider();
     // Google sign in
     const googleSignIn = () =>{
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            setUser(result.user)
-        })
-        .catch(error =>{
-            setError(error.message)
-        })
+      return signInWithPopup(auth, googleProvider)
+      .catch(error => {
+        setError(error.message)
+    })
     }
 // handel registration
 const handelRegistration =(e)=>{

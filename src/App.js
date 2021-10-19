@@ -12,6 +12,7 @@ import AuthProvider from './Components/Context/AuthProvider';
 import DoctorDetails from './Components/Pages/OurDoctors/DoctorDetails';
 import About from './Components/Pages/About/About';
 import OurDoctors from './Components/Pages/OurDoctors/OurDoctors';
+import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 
 
 function App() {
@@ -30,12 +31,12 @@ function App() {
               <Route path="/ourdoctors">
                   <OurDoctors/>
               </Route>
-              <Route path="/serviceDetails/:servicedetailsid">
+              <PrivetRoute path="/serviceDetails/:servicedetailsid">
                 <ServiceDetails/>
-              </Route>
-              <Route path="/doctorDetails/:doctorDetailsId">
+              </PrivetRoute>
+              <PrivetRoute path="/doctorDetails/:doctorDetailsId">
                 <DoctorDetails/>
-              </Route>
+              </PrivetRoute>
               <Route exact path="/">
                   <Home/>
               </Route>

@@ -11,7 +11,7 @@ const Header = () => {
     const signInIcon = <FontAwesomeIcon icon={faSignInAlt} />
     const signOutIcon = <FontAwesomeIcon icon={faSignOutAlt} />
     return (
-            <Navbar  Navbar bg="primary" variant="light" expand="lg">
+            <Navbar sticky="top" Navbar bg="primary" variant="light" expand="lg">
             <Container>
                 <Navbar.Brand><img src={logo} width="60" alt="logo" /><span className="ms-3 fw-bold text-white">Life Care  Clinic</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

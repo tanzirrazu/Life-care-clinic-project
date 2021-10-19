@@ -2,12 +2,22 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle} from '@fortawesome/free-brands-svg-icons'
 import useAuth from '../Context/useAuth';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
-    const {googleSignIn, handelRegistration, signInWithEmail} = useAuth()
-    const googleIcon = <FontAwesomeIcon icon={faGoogle} />
     let history = useHistory()
+    const {googleSignIn, handelRegistration, signInWithEmail} = useAuth()
+    const location = useLocation()
+    const rediret_url = location.state?.from || '/home'
+    //  redirect handel
+    const handelGooglelogin = ()=>{
+        googleSignIn()
+        .then(result =>{
+           history.push(rediret_url)
+        })
+       
+    }
+    const googleIcon = <FontAwesomeIcon icon={faGoogle} />
     const handelLoginToRegister =()=>{
         history.push('/register')
     }
@@ -33,7 +43,7 @@ const Login = () => {
                 </form>
                 <div className="my-5">
                         <div className="d-grid gap-2 col-4 mx-auto">
-                        <button onClick={googleSignIn} className="btn btn-primary" type="button"> <span className="me-2 mt-1">{googleIcon}</span> Google Sign In</button>
+                        <button onClick={handelGooglelogin} className="btn btn-primary" type="button"> <span className="me-2 mt-1">{googleIcon}</span> Google Sign In</button>
                         </div>
                 </div>
         </div>
