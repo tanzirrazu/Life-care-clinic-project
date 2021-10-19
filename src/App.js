@@ -11,6 +11,7 @@ import Register from './Components/Register/Register';
 import AuthProvider from './Components/Context/AuthProvider';
 import DoctorDetails from './Components/Pages/OurDoctors/DoctorDetails';
 import About from './Components/Pages/About/About';
+import OurDoctors from './Components/Pages/OurDoctors/OurDoctors';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
               </Route>
               <Route path="/about">
                   <About/>
+              </Route>
+              <Route path="/ourdoctors">
+                  <OurDoctors/>
               </Route>
               <Route path="/serviceDetails/:servicedetailsid">
                 <ServiceDetails/>

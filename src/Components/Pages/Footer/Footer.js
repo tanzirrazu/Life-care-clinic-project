@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><Link to="/" className="text-white text-decoration-none">happy customers clients</Link></li>
+                            <li><Link to="/" className="text-white text-decoration-none">Healthy and happy customers clients</Link></li>
                             <li><Link to="/" className="text-white text-decoration-none">Professional medical specialist</Link></li>
                             <li><Link to="/" className="text-white text-decoration-none">Certificates</Link></li>
                             <li><Link to="/" className="text-white text-decoration-none">FAQ</Link></li>

@@ -16,6 +16,7 @@ const About = () => {
             <hr />
               <div className="text-center pb-2 fw-bold ">
                 <h1 className="text-center display-3 fw-bold"><span className="text-primary">About</span> Us</h1>
+                <p >Life Care Clinic has over two decades of experience in the healthcare sector, and is known for providing quality healthcare and valuable experience to all domestic and international patients. <br /> Our healthcare offerings are supported by a team of compassionate and dedicated medical professionals who have rich knowledge and experience in their respective domains.</p>
             </div>
                 <hr />
                 <div className="row container-fluid align-items-center">

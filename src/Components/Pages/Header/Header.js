@@ -18,7 +18,8 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto d-flex align-items-center">
                     <NavLink to="/home" className="text-decoration-none text-white fw-bold me-4  ">Home</NavLink>
-                    <NavLink to="/About" className="text-decoration-none text-white fw-bold me-4  ">About</NavLink>
+                    <NavLink to="/about" className="text-decoration-none text-white fw-bold me-4  ">About</NavLink>
+                    <NavLink to="/ourdoctors" className="text-decoration-none text-white fw-bold me-4  ">Doctors</NavLink>
                     <NavLink to="/register" className="text-decoration-none text-white fw-bold me-4  ">Register</NavLink>
                   { user.displayName ? <button onClick={logOut} className="btn btn-danger text-center">{signOutIcon}</button> :
                     <NavLink to="/signin" className="text-decoration-none text-white fw-bold me-4  text-center">{signInIcon}</NavLink>}
