@@ -45,10 +45,13 @@ const handelRegistration =(e)=>{
         setError('Password Must Contain Two Uppercase')
         return;
     }
+    createEamilPasswrod()
+
+}
+const createEamilPasswrod=()=>{
     createUserWithEmailAndPassword(auth, email, password)
     .then(result=>{
         setUser(result.user)
-   
         // clear the error
         setError('')
         setUserName()
@@ -56,7 +59,6 @@ const handelRegistration =(e)=>{
     .catch(error => {
         setError(error.message)
     })
-
 }
 // sign in with email
 const signInWithEmail =() =>{
@@ -115,6 +117,7 @@ const logOut =()=>{
        handelPassword,
        logOut,
        handelRegistration,
+       createEamilPasswrod,
        signInWithEmail,
        nameHandel,
        githubSignIn,

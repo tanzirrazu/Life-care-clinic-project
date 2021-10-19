@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleDoctor from './SingleDoctor';
 
-
 const OurDoctors = () => {
     const [doctors, setDoctors] = useState([])
     useEffect(()=>{
@@ -24,7 +23,6 @@ const OurDoctors = () => {
                             key={doctor.id}
                             doctor={doctor}
                             >
-                            
                             </SingleDoctor>)
                         }
                 </div>

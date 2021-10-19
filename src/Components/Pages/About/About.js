@@ -22,7 +22,7 @@ const About = () => {
                 <div className="row container-fluid align-items-center">
                         <h1 className="fw-bold text-decoration-underline">Certificates</h1>
                         <div className="col-md-6 col-lg-6 col-12">
-                                <h4>We use only the most modern medical equipment, skills for modern trends and innovations introducing into our practice. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h4>
+                        <h4>We use only the most modern medical equipment, skills for modern trends and innovations introducing into our practice. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h4>
                         </div>
                         <div className="col-md-6 col-lg-6 col-12">
                                 <img className="img-fluid" src={about1} alt="" />
@@ -34,28 +34,28 @@ const About = () => {
                                 <img className="img-fluid" src={about3} alt="" />
                         </div>
                 </div>
-                {/* single single */}
+                {/* single item */}
                 <div className="row container-fluid text-center my-5 bg-dark p-3 text-white">
     
                         <div className="col-md-3 col-lg-3 col-12">
                                 <h1 className="text-primary">{userIcon}</h1>
-                                <h1>7220+</h1>
-                                <h3>Healthy and happy customers clients</h3>
+                                <h2>7220+</h2>
+                                <h4>Healthy and happy customers clients</h4>
                         </div>
                         <div className="col-md-3 col-lg-3 col-12">
                                 <h1 className="text-primary">{userNurse}</h1>
-                                <h1>120+</h1>
-                                <h3>Best professional medical specialist</h3>
+                                <h2>120+</h2>
+                                <h4>Best professional medical specialist</h4>
                         </div>
                         <div className="col-md-3 col-lg-3 col-12">
                                <h1 className="text-primary">{gemIcon}</h1>
-                               <h1>14+</h1>
-                                <h3>Years of impeccable and successful work</h3>
+                               <h2>14+</h2>
+                                <h4>Years of impeccable and successful work</h4>
                         </div>
                         <div className="col-md-3 col-lg-3 col-12">
                                 <h1 className="text-primary">{awardIcon}</h1>
-                                <h1>450+</h1>
-                                <h3>Diplomas and awards of our clinic</h3>
+                                <h2>450+</h2>
+                                <h4>Diplomas and awards of our clinic</h4>
                         </div>
                 </div>
                 {/* accourdion */}
@@ -81,7 +81,6 @@ const About = () => {
                             <Accordion.Header>Do I have to folow the Best Doctors recomendation?</Accordion.Header>
                             <Accordion.Body>
                             No. Best Doctors is providing you with this information so that you can bring it to your treating physician and work with him or her to make informed decisions regarding your diagnosis and/or treatment plan.
-                           
                             </Accordion.Body>
                         </Accordion.Item>
                         </Accordion>

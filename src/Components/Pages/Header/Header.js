@@ -22,7 +22,7 @@ const Header = () => {
                     <NavLink activeClassName="active-link" to="/about" className="text-decoration-none text-white fw-bold me-4  ">About</NavLink>
                     <NavLink activeClassName="active-link" to="/ourdoctors" className="text-decoration-none text-white fw-bold me-4  ">Doctors</NavLink>
                     <NavLink activeClassName="active-link" to="/register" className="text-decoration-none text-white fw-bold me-4  ">Register</NavLink>
-                  { user.email ? <button onClick={logOut} className="btn btn-danger text-center">{signOutIcon}</button> :
+                  { user.displayName ? <button onClick={logOut} className="btn btn-danger text-center">{signOutIcon}</button> :
                     <NavLink to="/signin" className="text-decoration-none text-white fw-bold me-4  text-center">{signInIcon}</NavLink>}
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text className="ms-3 text-white">

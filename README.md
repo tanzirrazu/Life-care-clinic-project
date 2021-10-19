@@ -1,6 +1,6 @@
 # Welcome to  Life Care Clinic
 
-live link:  [health-care-8735a.web.app](health-care-8735a.web.app).
+live link:  [health-care-8735a.web.app](https://health-care-8735a.web.app/).
 
 ## Our Services 
 *  Daily Hom Care
