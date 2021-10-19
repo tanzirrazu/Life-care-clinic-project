@@ -14,6 +14,8 @@ const [user, setUser] = useState({})
 const [email, setEmail] = useState('')
 // password state
 const [password, setPassword] = useState('')
+// loading state
+const [loading, setLoading] = useState(true)
 
     const auth = getAuth();
     const githubProvider = new GithubAuthProvider()
@@ -24,6 +26,7 @@ const [password, setPassword] = useState('')
       .catch(error => {
         setError(error.message)
     })
+    .finally(()=> setLoading(false))
     }
     //  github sign in
     const githubSignIn = () =>{
@@ -31,6 +34,7 @@ const [password, setPassword] = useState('')
         .catch(error => {
             setError(error.message)
         })
+        .finally(()=> setLoading(false))
     }
 
 // handel registration
@@ -100,18 +104,25 @@ const logOut =()=>{
     .then(()=>{
         setUser({})
     })
+    .finally(()=> setLoading(false))
     }
 // state change handel
     useEffect(()=>{
-        onAuthStateChanged(auth, (user)=>{
+      const unsubscribed=  onAuthStateChanged(auth, (user)=>{
             if(user){
                 setUser(user)
             }
+            else{
+                setUser({})
+            }
+            setLoading(false)
         })
+        return () => unsubscribed
     },[auth])
    return{
        user,
        error,
+       loading,
        googleSignIn,
        handelEmail,
        handelPassword,
@@ -120,7 +131,8 @@ const logOut =()=>{
        createEamilPasswrod,
        signInWithEmail,
        nameHandel,
-       githubSignIn,
+       githubSignIn
+
 
    }
 };
