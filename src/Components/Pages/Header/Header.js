@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Context/useAuth';
-import './Header.css'
+
 
 const Header = () => {
     const { user, logOut} = useAuth()

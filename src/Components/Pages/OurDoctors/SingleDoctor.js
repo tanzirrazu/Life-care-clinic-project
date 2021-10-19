@@ -5,7 +5,7 @@ const SingleDoctor = (props) => {
     const {id, image, qulification, name} = props.doctor
     return (
         <div className="col-md-4 col-lg-4 col-sm-12 col-xs-12 col">
-            <div className="p-3 shadow card h-100">
+            <div className="p-3 shadow onHover card h-100">
                 <div>
                     <img className="img-fluid " src={image} alt="" />
                     </div>

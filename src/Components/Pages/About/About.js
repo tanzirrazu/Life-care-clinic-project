@@ -21,16 +21,16 @@ const About = () => {
                 <hr />
                 <div className="row container-fluid align-items-center">
                         <h1 className="fw-bold text-decoration-underline">Certificates</h1>
-                        <div className="col-md-6 col-lg-6 col-12">
+                        <div className="col-md-6 col-lg-6 col-12 ">
                         <h4>We use only the most modern medical equipment, skills for modern trends and innovations introducing into our practice. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h4>
                         </div>
-                        <div className="col-md-6 col-lg-6 col-12">
+                        <div className="col-md-6 col-lg-6 col-12 imageHover g-4">
                                 <img className="img-fluid" src={about1} alt="" />
                         </div>
-                        <div className="col-md-6 col-lg-6 col-12">
+                        <div className="col-md-6 col-lg-6 col-12 imageHover g-4">
                                 <img className="img-fluid" src={about2} alt="" />
                         </div>
-                        <div className="col-md-6 col-lg-6 col-12">
+                        <div className="col-md-6 col-lg-6 col-12 imageHover g-4">
                                 <img className="img-fluid" src={about3} alt="" />
                         </div>
                 </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+
+
 const Pricing = () => {
     const circleIcon = <FontAwesomeIcon icon={faCheck} />
   return (
@@ -16,7 +18,7 @@ const Pricing = () => {
       <div className="row container mx-auto">
           {/* single discound table */}
           <div className="col-lg-4 col-mg-4 col-sm-12 col-xs-12">
-            <div className="my-5 shadow-lg">
+            <div className="my-5 shadow-lg onHover">
                 <div className="bg-info p-5 text-center text-white">
                     <h2>Diagnostics</h2>
                     <h4>Fetaure laboratory</h4>
@@ -47,7 +49,7 @@ const Pricing = () => {
           </div>
            {/* single discound table */}
            <div className="col-lg-4 col-mg-4 col-sm-12 col-xs-12">
-            <div className="my-5 shadow-lg">
+            <div className="my-5 shadow-lg onHover">
                 <div className="bg-dark p-5 text-center text-white">
                     <h2>Pediatrics</h2>
                     <h4>for kids of 2years</h4>
@@ -78,7 +80,7 @@ const Pricing = () => {
           </div>
            {/* single discound table */}
            <div className="col-lg-4 col-mg-4 col-sm-12 col-xs-12">
-            <div className="my-5 shadow-lg">
+            <div className="my-5 shadow-lg onHover">
                 <div className="bg-primary p-5 text-center text-white">
                     <h2>Dental</h2>
                     <h4>our dental services</h4>
