@@ -5,6 +5,10 @@ import { useHistory, useParams } from 'react-router';
 const ServiceDetails = () => {
     const {servicedetailsid} = useParams()
     const [details, setDetails] = useState([])
+    const history = useHistory()
+    const handelGoBack =()=>{
+        history.push('/')
+    }
     useEffect(()=>{
         fetch('https://raw.githubusercontent.com/tanzirrazu/fakedata/main/data.json')
         .then(res => res.json())
@@ -31,6 +35,7 @@ const ServiceDetails = () => {
                 <div className="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <img className="img-fluid" src={detailFound[0]?.image} alt="" />
                 </div>
+                <button onClick={handelGoBack} className="btn btn-outline-dark w-25 shadow">Go Back</button>
         </div>
     );
 };

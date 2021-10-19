@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt, faGraduationCap, faClock, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
@@ -10,6 +10,10 @@ const DoctorDetails = () => {
     const brifIcon = <FontAwesomeIcon icon={faBriefcase} />
     const {doctorDetailsId} =useParams()
     const [details, setDetails] = useState([])
+    const history = useHistory()
+    const handelGoBack = () =>{
+        history.push('/')
+    }
 
     useEffect(()=>{
         fetch('https://raw.githubusercontent.com/tanzirrazu/fakedata/main/doctor.json')
@@ -47,6 +51,7 @@ const DoctorDetails = () => {
                                 </div>
                                 <p className="text-secondary px-4 ms-3">Life care clinic</p>
                         </div>
+                        <button onClick={handelGoBack} className="btn btn-outline-dark form-control mt-3 shadow">Go Back</button>
                 </div>
                 <div  className="col-md-8 col-lg-8 col-xs-12 col-sm-12">
                         <h4>Feature medical center "Life Care Clinic"</h4>
@@ -57,6 +62,7 @@ const DoctorDetails = () => {
                         <p className="text-secondary my-5">In today’s operational department conducted a wide range of operations under local and general anesthesia; as in “Nordis” provides services for the diagnosis and treatment of infertility, including the use of reproductive technologies (IVF).</p>
                         <h4 className="text-darl my-5 fw-bold">Finibus Bonorum et Malorum”, written by Cicero in 45 BC</h4>
                         <p className="text-secondary my-5">In addition to the medical services we provide services in the field of tourism. Managers of tourism department “Nordis” will help organize the passage of therapeutic and preventive measures and rehabilitation courses in the best health resorts of Belarus, stay in resorts and abroad, as well as its own tourist pearl – hotel “Nordis”, located on the island of Lepel lake.</p>
+                        
                 </div>
         </div>
     );

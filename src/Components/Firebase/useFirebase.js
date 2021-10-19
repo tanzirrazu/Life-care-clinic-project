@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, updateProfile, signInWithEmailAndPassword , onAuthStateChanged , signOut, createUserWithEmailAndPassword   } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,  GithubAuthProvider, updateProfile, signInWithEmailAndPassword , onAuthStateChanged , signOut, createUserWithEmailAndPassword   } from "firebase/auth";
 
 import  { useEffect, useState } from 'react';
 import initialization from "./firebase.init";
@@ -16,6 +16,7 @@ const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
     const auth = getAuth();
+    const githubProvider = new GithubAuthProvider()
     const googleProvider = new GoogleAuthProvider();
     // Google sign in
     const googleSignIn = () =>{
@@ -24,6 +25,14 @@ const [password, setPassword] = useState('')
         setError(error.message)
     })
     }
+    //  github sign in
+    const githubSignIn = () =>{
+      return  signInWithPopup (auth, githubProvider)
+        .catch(error => {
+            setError(error.message)
+        })
+    }
+
 // handel registration
 const handelRegistration =(e)=>{
     e.preventDefault()
@@ -31,6 +40,7 @@ const handelRegistration =(e)=>{
         setError('Password must be 6 chacrecter')
         return;
     }
+    // two charecter must be uppercase
     if(/(?=.*[A-Z].*[A-Z]) /.test(password)){
         setError('Password Must Contain Two Uppercase')
         return;
@@ -38,7 +48,7 @@ const handelRegistration =(e)=>{
     createUserWithEmailAndPassword(auth, email, password)
     .then(result=>{
         setUser(result.user)
-
+   
         // clear the error
         setError('')
         setUserName()
@@ -52,9 +62,8 @@ const handelRegistration =(e)=>{
 const signInWithEmail =() =>{
     signInWithEmailAndPassword(auth, email, password)
     .then(result =>{
-       
         setUser(result.user)
-
+        console.log(result.user);
     })
     .catch(error => {
         setError(error.message)
@@ -107,7 +116,9 @@ const logOut =()=>{
        logOut,
        handelRegistration,
        signInWithEmail,
-       nameHandel
+       nameHandel,
+       githubSignIn,
+
    }
 };
 

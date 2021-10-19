@@ -1,12 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGoogle} from '@fortawesome/free-brands-svg-icons'
+import { faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import useAuth from '../Context/useAuth';
 import { useHistory } from 'react-router-dom';
 
 const Register = () => {
-    const {googleSignIn, handelEmail, handelPassword, handelRegistration, error, nameHandel} = useAuth()
+    const {googleSignIn, handelEmail, handelPassword, githubSignIn, error,  handelRegistration, nameHandel} = useAuth()
     const googleIcon = <FontAwesomeIcon icon={faGoogle} />
+    const githubIcon = <FontAwesomeIcon icon={faGithub} />
+
     let history = useHistory()
     const handelRegisterToLogin = () =>{
         history.push('/signin')
@@ -38,7 +40,8 @@ const Register = () => {
                 </form>
                 <div className="my-5">
                         <div className="d-grid gap-2 col-4 mx-auto">
-                        <button onClick={googleSignIn} className="btn btn-primary" type="button"> <span className="me-2 mt-1">{googleIcon}</span> Google Sign In</button>
+                        <button onClick={googleSignIn} className="btn btn-light mb-3" type="button"> <span className="me-2 mt-1">{googleIcon}</span> Google Sign In</button>
+                        <button onClick={githubSignIn} className="btn btn-dark" > <span className="me-2 mt-1">{githubIcon}</span> Github Sign In</button>
                         </div>
                 </div>
         </div>

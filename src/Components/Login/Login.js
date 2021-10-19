@@ -1,23 +1,31 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGoogle} from '@fortawesome/free-brands-svg-icons'
+import { faGoogle, faGithub} from '@fortawesome/free-brands-svg-icons'
 import useAuth from '../Context/useAuth';
 import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     let history = useHistory()
-    const {googleSignIn, handelRegistration, signInWithEmail} = useAuth()
+    const {googleSignIn, handelRegistration, githubSignIn,  signInWithEmail} = useAuth()
     const location = useLocation()
     const rediret_url = location.state?.from || '/home'
-    //  redirect handel
-    const handelGooglelogin = ()=>{
+    //  redirect handel with google
+    const handelGoogleSignIn = ()=>{
         googleSignIn()
         .then(result =>{
            history.push(rediret_url)
         })
-       
+    }
+        //  redirect handel with github
+    const handelGithubSignIn = ()=>{
+        githubSignIn()
+        .then(result =>{
+           history.push(rediret_url)
+        })
     }
     const googleIcon = <FontAwesomeIcon icon={faGoogle} />
+    const githubIcon = <FontAwesomeIcon icon={faGithub} />
+
     const handelLoginToRegister =()=>{
         history.push('/register')
     }
@@ -43,7 +51,8 @@ const Login = () => {
                 </form>
                 <div className="my-5">
                         <div className="d-grid gap-2 col-4 mx-auto">
-                        <button onClick={handelGooglelogin} className="btn btn-primary" type="button"> <span className="me-2 mt-1">{googleIcon}</span> Google Sign In</button>
+                        <button onClick={handelGoogleSignIn} className="btn btn-light mb-3" > <span className="me-2 mt-1 text-danger">{googleIcon}</span> Google Sign In</button>
+                        <button onClick={handelGithubSignIn} className="btn btn-dark" > <span className="me-2 mt-1">{githubIcon}</span> Github Sign In</button>
                         </div>
                 </div>
         </div>
