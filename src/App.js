@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <Header/>
           <Switch>
-              <Route path="/home">
+              <Route  path="/home">
                   <Home/>
               </Route>
               <Route path="/about">

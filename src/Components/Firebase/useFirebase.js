@@ -106,7 +106,7 @@ const logOut =()=>{
                 setUser(user)
             }
         })
-    },[])
+    },[auth])
    return{
        user,
        error,
