@@ -14,47 +14,46 @@ import About from './Components/Pages/About/About';
 import OurDoctors from './Components/Pages/OurDoctors/OurDoctors';
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 
-
 function App() {
-  return (
-    <div className="App">
-    <AuthProvider>
-    <BrowserRouter>
-      <Header/>
-          <Switch>
-              <Route  path="/home">
-                  <Home/>
-              </Route>
-              <Route path="/about">
-                  <About/>
-              </Route>
-              <Route path="/ourdoctors">
-                  <OurDoctors/>
-              </Route>
-              <PrivetRoute path="/serviceDetails/:servicedetailsid">
-                <ServiceDetails/>
-              </PrivetRoute>
-              <PrivetRoute path="/doctorDetails/:doctorDetailsId">
-                <DoctorDetails/>
-              </PrivetRoute>
-              <Route exact path="/">
-                  <Home/>
-              </Route>
-              <Route path="/signin">
-                  <Login/>
-              </Route>
-              <Route path="/register">
-                  <Register/>
-              </Route>
-              <Route  path="*">
-                  <NotFound/>
-              </Route>
-          </Switch>
-          <Footer/>
-      </BrowserRouter>
-    </AuthProvider>
-    </div>
-  );
+	return (
+		<div className="App">
+			<AuthProvider>
+				<BrowserRouter>
+					<Header />
+					<Switch>
+						<Route path="/home">
+							<Home />
+						</Route>
+						<Route path="/about">
+							<About />
+						</Route>
+						<Route path="/ourdoctors">
+							<OurDoctors />
+						</Route>
+						<PrivetRoute path="/serviceDetails/:servicedetailsid">
+							<ServiceDetails />
+						</PrivetRoute>
+						<PrivetRoute path="/doctorDetails/:doctorDetailsId">
+							<DoctorDetails />
+						</PrivetRoute>
+						<Route exact path="/">
+							<Home />
+						</Route>
+						<Route path="/signin">
+							<Login />
+						</Route>
+						<Route path="/register">
+							<Register />
+						</Route>
+						<Route path="*">
+							<NotFound />
+						</Route>
+					</Switch>
+					<Footer />
+				</BrowserRouter>
+			</AuthProvider>
+		</div>
+	);
 }
 
 export default App;
